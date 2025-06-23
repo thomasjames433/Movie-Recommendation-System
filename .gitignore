@@ -1,0 +1,18 @@
+.ipynb_checkpoints
+.venv
+
+
+name.basics.csv
+data.csv
+final.csv   
+name.basics.tsv  
+tconst_names.csv 
+title.principals.tsv
+filtered_movies.csv      
+names_df.csv      
+similar_indices.npy  
+test.py               
+filtered_principals.csv  
+name.basics.csv  requirements.txt  
+similar_scores.npy   
+title.principals.csv
