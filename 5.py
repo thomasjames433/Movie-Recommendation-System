@@ -2,6 +2,7 @@ import pandas as pd
 
 # Load dataset
 movies = pd.read_csv('final.csv')
+movies.rename(columns={'id': 'tmdb_id'}, inplace=True)
 
 # Filter condition
 zero_vote_count = movies[(movies['vote_count'] < 50) & (movies['vote_average'] < 2.0)].shape
@@ -11,11 +12,12 @@ print("Number of movies with vote_average < 2.0 and vote_count < 50:", zero_vote
 movies_cleaned = movies[~((movies['vote_count'] < 50) & (movies['vote_average'] < 2.0))]
 
 # Select only desired columns
-selected_columns = ['id', 'title','overview','genres', 'keywords','imdb_id','popularity','director','cast']  # modify as needed
+selected_columns = ['tmdb_id', 'title','overview','genres', 'keywords','imdb_id','popularity','director','cast']  # modify as needed
 movies_selected = movies_cleaned[selected_columns]
 
+movies_selected.index.name = 'id'  
 # Save only selected columns to CSV
-movies_selected.to_csv('final.csv', index=False)
+movies_selected.to_csv('final.csv', index=True)
 
 print("Filtered data with selected columns saved back to final.csv")
 print(len(movies))
