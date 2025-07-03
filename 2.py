@@ -11,7 +11,7 @@ with open (output_file,'w',encoding='utf-8')as out_f:
 
     for chunk in pd.read_csv('title.principals.csv', chunksize=100000, dtype=str):
         filtered_chunk = chunk[(chunk['tconst'].isin(imdb_ids)) & (chunk['category'].isin(jobs)) ]
-        filtered_chunk=filtered_chunk[['tconst','ordering','nconst','category','job']]
+        filtered_chunk=filtered_chunk[['tconst','ordering','nconst','category']]
         print(x)
         x+=1
         # Append to output

@@ -2,13 +2,13 @@ import pandas as pd
 
 df=pd.read_csv('data.csv')
 
-target_languages = ['en',  'ml', 'hi']
+target_languages = ['en']
 
 # Filter rows where the original_language is in the target list
 filtered_df = df[
                     (df['original_language'].isin(target_languages)) & 
                     (df['adult']==False) & 
-                    (df['release_date'].str[0:4].astype('Int64')>1969)
+                    (df['release_date'].str[0:4].astype('Int64')>2015)
                 ]
 
 # Select the desired columns

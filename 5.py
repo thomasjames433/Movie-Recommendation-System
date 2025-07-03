@@ -14,7 +14,7 @@ movies_cleaned = movies[~((movies['vote_count'] < 50) & (movies['vote_average'] 
 # Select only desired columns
 selected_columns = ['tmdb_id', 'title','overview','genres', 'keywords','imdb_id','popularity','director','cast']  # modify as needed
 movies_selected = movies_cleaned[selected_columns]
-
+movies_selected=movies_selected.head(3000)
 movies_selected.index.name = 'id'  
 # Save only selected columns to CSV
 movies_selected.to_csv('final.csv', index=True)

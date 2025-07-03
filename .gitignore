@@ -15,4 +15,15 @@ test.py
 filtered_principals.csv  
 name.basics.csv  requirements.txt  
 similar_scores.npy   
+unfiltered.title.principals.csv 
 title.principals.csv
+
+testing.py
+
+cast
+director
+final
+genres
+keywords
+overview
+venv

@@ -107,7 +107,7 @@ cast.loc[:, 'cast'] = cast['cast'].str.replace('-', '', regex=False)
 cv_cast=CountVectorizer(stop_words='english')
 cast_vectors=cv_cast.fit_transform(cast['cast'])
 '''
-print("Finish Stemming")
+print("Finish CV")
 
 
 import faiss
